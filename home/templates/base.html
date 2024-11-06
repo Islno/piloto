@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Página Inicial{% endblock %}</title>
+    <style>
+        /* Estilos para o menu */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav>
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+        <a href="{% url 'contato' %}">Contato</a>
+        <a href="{% url 'ajuda' %}">Ajuda</a>
+    </nav>
+
+   
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
